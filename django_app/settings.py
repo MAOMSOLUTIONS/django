@@ -129,73 +129,12 @@ STATIC_URL = '/static/'
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework_simplejwt.authentication.JWTAuthentication',
-        # Otras clases de autenticación
-    ],
-    'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.IsAuthenticated',
-        # Otras clases de permisos
-    ],
-    'DEFAULT_RENDERER_CLASSES': [
-        'rest_framework.renderers.JSONRenderer',
-        # Otros renderizadores
-    ],
-    'DEFAULT_PARSER_CLASSES': [
-        'rest_framework.parsers.JSONParser',
-        # Otros parsers
-    ],
-    'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
-        # Otras clases de autenticación
-    ],
-    'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.IsAuthenticated',
-        # Otras clases de permisos
-    ],
-    'DEFAULT_RENDERER_CLASSES': [
-        'rest_framework.renderers.JSONRenderer',
-        # Otros renderizadores
-    ],
-    'DEFAULT_PARSER_CLASSES': [
-        'rest_framework.parsers.JSONParser',
-        # Otros parsers
-    ],
-    'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
-        # Otras clases de autenticación
-    ],
-    'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.IsAuthenticated',
-        # Otras clases de permisos
-    ],
-    'DEFAULT_RENDERER_CLASSES': [
-        'rest_framework.renderers.JSONRenderer',
-        # Otros renderizadores
-    ],
-    'DEFAULT_PARSER_CLASSES': [
-        'rest_framework.parsers.JSONParser',
-        # Otros parsers
-    ],
-    'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
-        # Otras clases de autenticación
-    ],
-    'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.IsAuthenticated',
-        # Otras clases de permisos
-    ],
-    'DEFAULT_RENDERER_CLASSES': [
-        'rest_framework.renderers.JSONRenderer',
-        # Otros renderizadores
-    ],
-    'DEFAULT_PARSER_CLASSES': [
-        'rest_framework.parsers.JSONParser',
-        # Otros parsers
-    ],
+    ]
 }
 
 # Configuraciones de JWT
 SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=15),  # Tiempo de vida del token de acceso
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=30),  # Tiempo de vida del token de acceso
     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),     # Tiempo de vida del token de actualización
     'ROTATE_REFRESH_TOKENS': False,                  # Rotar tokens de actualización
     'BLACKLIST_AFTER_ROTATION': True,                # Agregar tokens antiguos a la lista negra después de la rotación
@@ -205,12 +144,9 @@ SIMPLE_JWT = {
     'AUTH_HEADER_TYPES': ('Bearer',),                # Tipos de encabezado de autenticación aceptados
     'USER_ID_FIELD': 'id',                           # Campo utilizado para identificar al usuario en el token
     'USER_ID_CLAIM': 'user_id',                      # Claim utilizado para almacenar el ID del usuario en el token
-   'AUTH_HEADER_TYPES': ('Bearer',),                # Tipos de encabezado de autenticación aceptados
-   'USER_ID_FIELD': 'id',                           # Campo utilizado para identificar al usuario en el token
-   'USER_ID_CLAIM': 'user_id',                      # Claim utilizado para almacenar el ID del usuario en el token
-   'AUTH_TOKEN_CLASSES': ('rest_framework_simplejwt.tokens.AccessToken',),  # Clases de token utilizadas para autenticación
-   'TOKEN_TYPE_CLAIM': 'token_type',                # Claim utilizado para almacenar el tipo de token en el token
-   'SLIDING_TOKEN_REFRESH_EXP_CLAIM': 'refresh_exp',  # Claim utilizado para almacenar el tiempo de expiración del token de actualización
-   'SLIDING_TOKEN_LIFETIME': timedelta(minutes=5),  # Tiempo de vida del token de acceso deslizante
-   'SLIDING_TOKEN_REFRESH_LIFETIME': timedelta(days=1),  # Tiempo de vida del token de actualización deslizante
+    'AUTH_TOKEN_CLASSES': ('rest_framework_simplejwt.tokens.AccessToken',),  # Clases de token utilizadas para autenticación
+    'TOKEN_TYPE_CLAIM': 'token_type',                # Claim utilizado para almacenar el tipo de token en el token
+    'SLIDING_TOKEN_REFRESH_EXP_CLAIM': 'refresh_exp',  # Claim utilizado para almacenar el tiempo de expiración del token de actualización
+    'SLIDING_TOKEN_LIFETIME': timedelta(minutes=5),  # Tiempo de vida del token de acceso deslizante
+    'SLIDING_TOKEN_REFRESH_LIFETIME': timedelta(days=1),  # Tiempo de vida del token de actualización deslizante
 }
